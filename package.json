@@ -1,0 +1,9 @@
+{
+	"name": "HTML5-test",
+	"description": "HTML5 test application",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"mustache": "0.8.x"
+	}
+}
