@@ -1,75 +1,45 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Control Panel</title>
+		<title>Title</title>
 		<link href="css/style.css" rel="stylesheet">
+		
 	</head>
 	<body>
+		<div id="contents"></div>
+		<script src="js/jquery-min.js"></script>
+		<script src="js/underscore-min.js"></script>
+		<script src="js/backbone-min.js"></script>
+		<script src="js/mustache.js"></script>
 		
-		<div class="panel">
-			<!--Caption-->
-			<div class="caption">
-				<h3 align="center">СИСТЕМА УПРАВЛЕНИЯ ЕТ-300</h3>
-			</div>
-			<!--Menu-->
-			<div class="block">
-				<fieldset class="groupbox menu">
-					<legend align="center">МЕНЮ</legend>
+		<script type="text/javascript">
+			var Sim = Backbone.Model.extend({
+				defaults: {
+					caption: 'Default Caption',
+					allText: 'A whole page text'
+				}
 
-				</fieldset>
-
-				
+			})
 			
 
-			</div>
-			<div>
-<fieldset class="groupbox diagram">
-					<legend align="center">СХЕМА</legend>
-					<canvas id="a" width="300" height="300"></canvas>
-					<script>
-						var a_canvas=document.getElementById("a");
-						var a_context=a_canvas.getContext("2d");
-						
-						var gradient=a_context.createLinearGradient(40,0,200,0);
-						gradient.addColorStop(0,'#6e6e6e');
-						gradient.addColorStop(0.5,'#bababa');
-						gradient.addColorStop(1,'#6e6e6e');
-a_context.fillStyle=gradient;
-a_context.fillRect(20, 40, 200, 30);
-					</script>
-				</fieldset>
-							
-								
-						<fieldset class="groupbox options">
-							<legend align="center">ПАРАМЕТРЫ</legend>
+			var SimView = Backbone.View.extend({
 
-						</fieldset>
-					
-								
-						<fieldset class="groupbox messages">
-							<legend align="center">СООБЩЕНИЯ</legend>
+				el: $("#contents"),
 
-						</fieldset>
-					
-				
-			</div>
+				initialize: function() {
+					this.render()
+				},
 
-			<div>
-			<!--Diagram-->
-				<fieldset class="groupbox log">
-							<legend align="center">РЕГИСТРАТОР</legend>
-
-						</fieldset>
-					
-			<fieldset class="groupbox control">
-							<legend align="center">ПУЛЬТ УПРАВЛЕНИЯ</legend>
-
-						</fieldset>
-	
-			</div>
-		</div>
-	</body>
-
+				render: function() {
+					var template = "<body><h3>{{caption}}</h3><p> <strong>spend</strong> {{allText}}</p></body>"
+					var output = Mustache.render(template, this.model.toJSON())
+					this.$el.html(output)
+					return this
+				}
+			})
+			var sim = new Sim()
+			var simView = new SimView({model: sim})
+		</script>
+	</body>	
 </html>
