@@ -1,0 +1,63 @@
+.panel {
+	width: 1200px;
+	height: 500px;	
+}
+
+.caption {
+	background-color: #F3EC29;
+	border: black 1px solid;
+	height: 40px;
+	padding: 5px 5px 10px 5px;
+	margin: 5px 5px 5px 5px;
+}
+
+.groupbox, legend {
+	background-color: #F3EC29;
+	border: black 1px solid;
+}
+
+.menu {
+	width: 80px;
+	height: 800px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+}
+
+.diagram {
+	width: 490px;
+	height: 490px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+}
+
+.options {
+	width: 520px;
+	height: 250px;
+	margin: 5px 5px 5px 5px;
+	float: right;
+}
+
+.messages {
+	width: 520px;
+	height: 210px;
+	margin: 5px 5px 5px 5px;
+	float: right;
+}
+
+.log {
+	width:1045px;
+	height: 80px;
+	float: right;
+	margin: 5px 5px 5px 5px;
+}
+
+.control {
+	width:1045px;
+	height: 80px;
+	float: right;
+	margin: 5px 5px 5px 5px;
+}
+
+.block {
+	float: left;
+}	
