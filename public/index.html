@@ -1,45 +1,218 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Title</title>
-		<link href="css/style.css" rel="stylesheet">
-		
+		<title>Control Panel</title>
+		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div id="contents"></div>
-		<script src="js/jquery-min.js"></script>
-		<script src="js/underscore-min.js"></script>
-		<script src="js/backbone-min.js"></script>
-		<script src="js/mustache.js"></script>
 		
-		<script type="text/javascript">
-			var Sim = Backbone.Model.extend({
-				defaults: {
-					caption: 'Default Caption',
-					allText: 'A whole page text'
-				}
+		<div class="panel">
+			<!--Caption-->
+			<div class="caption">
+				<h3 align="center">СИСТЕМА УПРАВЛЕНИЯ ЕТ-300</h3>
+			</div>
+			<!--Menu-->
+			<div class="block">
+				<fieldset class="groupbox menu">
+					<legend align="center">МЕНЮ</legend>
+					<button class="mbutton bt"><img class="mbutton" src='log.png'><p>осцил.</p></button>
+					<button class="mbutton bt"><img class="mbutton" src='play.png'><p>редакт.</p></button>
+					<button class="mbutton bt"><img class="mbutton" src='write.png'><p>отчет</p></button>
+					<button class="mbutton bt"><img class="mbutton" src='help.png'><p>помощь</p></button>
+				</fieldset>
+			</div>
+			<div>
+				<fieldset id="diagr" class="groupbox diagram">
+					<legend align="center">СХЕМА</legend>
+					
+				</fieldset>			
+				<fieldset class="groupbox options">
+					<legend align="center">ПАРАМЕТРЫ</legend>
+					<div class="Z">
+							<p align="center">Z=+000.000 mm</p>
+					</div>
+					<div>
+						<div class="OS">
+							<div class="OptSub">
+								<div><p>Limp, A</p></div>
+								<div><p>0000.0</p></div>
+							</div>
+							<div class="OptSub">
+								<div><p>Cond, mS</p></div>
+								<div><p>нет данных</p></div>		
+							</div>
+						</div>
+						<div class="OS">
+							<div class="OptSub">
+								<div><p>Lmid, A</p></div>
+								<div><p>0000.0</p></div>
+							</div>
+							<div class="OptSub">
+								<div><p>Temp, grC</p></div>
+								<div><p>нет данных</p></div>		
+							</div>
+						</div>
+						<div class="OS">
+							<div class="OptSub">
+								<div><p>Uimp, V</p></div>
+								<div><p>00.0</p></div>
+							</div>
+							<div class="OptSub">
+								<div><p>Vk, mm/min</p></div>
+								<div><p>000.000</p></div>		
+							</div>
+						</div>
+						<div class="OS">
+							<div class="OptSub">
+								<div><p>Q, kC</p></div>
+								<div><p>0.0</p></div>
+							</div>
+							<div class="OptSub">
+								<div><p>Gap, mm</p></div>
+								<div><p>нет данных</p></div>		
+							</div>
+						</div>
+						<div class="OS">
+							<div class="OptSub">
+								<div><p>pH</p></div>
+								<div><p>нет данных</p></div>
+							</div>
+							<div class="OptSub">
+								<div><p>F, hZ</p></div>
+								<div><p>0.00</p></div>		
+							</div>
+						</div>
+					</div>	
+				</fieldset>		
+				<fieldset class="groupbox messages">
+					<legend align="center">СООБЩЕНИЯ</legend>
+					<div>
+						<div id="POWERID" class="PropHL"><p align="center">ОТКЛ.</p></div>
+						<div id="CONTACTID" class="PropHL"><p align="center">НАСТР. 0</p></div>
+						<div id="ECMID" class="PropHL"><p align="center">ЭХО</p></div>
+						<div id="WASHID" class="PropHL"><p align="center">ПРОМЫВ.</p></div>
+						<div id="FINDREFID" class="PropHL"><p align="center">ИНИЦИАЛ.</p></div>
+					</div>
+					<div>
+						<div class="Propi"></div><div class="Propt"><p>Нет сообщений о ходе процесса</p></div><div></div>
+					</div>
+					<div>
+						<div class="Propi"></div><div class="Propt"><p>Нет сообщений о ходе процесса</p></div><div></div>
+					</div>
+				</fieldset>
+					
+				
+			</div>
 
-			})
-			
+			<div>
+			<!--Diagram-->
+				<fieldset class="groupbox log">
+					<legend align="center">РЕГИСТРАТОР</legend>
 
-			var SimView = Backbone.View.extend({
+				</fieldset>
+					
+				<fieldset class="groupbox control">
+					<legend align="center">ПУЛЬТ УПРАВЛЕНИЯ</legend>
+					<div>
+						<p>Имя:"NONAME", кадры: 1, тип кадра: "Цикл", кадр: 0, время обработки: 0:00:00</p>
+					</div>
+					<div class="ctlblk">
+						<div class="CtrlHL">
+							<p>текущий</p>
+						</div>
+						<div class="CtrlHL">
+							<p>следующий</p>
+						</div>
+					</div>
+					<div class="ctlblk">
+						<form action="">
+							<input type="radio" name="ggg" value="s">грубо<br>
+							<input type="radio" name="ggg" value="p">точно
+						</form>
+					</div>
+					<div class="ctlblk">
+						<div class="OptSub">
+							<div><p>Z, mm</p></div>
+							<div><p>000.000</p></div>
+						</div>
+					</div>
+					<div class="ctlblk">
+						<div class="OptSub">
+							<div><p>V, mm/m</p></div>
+							<div><p>000.100</p></div>
+						</div>
+					</div>
+					<div class="ctlblk">
+						<div class="OptSub">
+							<div><p>Gap, mm</p></div>
+							<div><p>000.020</p></div>
+						</div>
+					</div>
+					<div class="ctlblk">
+						<div class="OptSub">
+							<div><p>cZ, mm</p></div>
+							<div><p>000.100</p></div>
+						</div>
+					</div>
+					<div class="ctlblk">
+						<div class="OptSub">
+							<div><p>P, kPa</p></div>
+							<div><p>100</p></div>
+						</div>
+					</div>
+				</fieldset>
+	
+			</div>
+		</div>
+		<!--Control Block-->
+		<div class="cntrblk">
+			<div class="SB SB5">
+				<div class="SBh"><p align="center">-Z</p></div>
+				<button class="SBrb"></button>
+			</div>
+			<div class="SB SB4">
+				<div class="SBh"><p align="center">+Z</p></div>
+				<button class="SBrb"></button>
+			</div>
+			<div class="SB SB3">
+				<div class="SBh"><p align="center">SB3</p></div>
+				<button class="SBrb"></button>
+			</div>
+			<div class="SA SA2">
+				<div class="SBh"><p align="center">SA2</p></div>
+				<div class="HLi"></div>
+			</div>
+			<div class="SB SB1">
+				<div class="SBh"><p align="center">SB1</p></div>
+				<button id="SB1ID" class="SBrb"></button>
+			</div>
+			<div class="SB SB2">
+				<div class="SBh"><p align="center">SB2</p></div>
+				<button class="SBrb"></button>
+			</div>
+			<div class="HL HL3">
+				<div class="SBh"><p align="center">HL3</p></div>
+				<div id="HL3ID" class="HLi"></div>
+			</div>
+			<div class="HL HL4">
+				<div class="SBh"><p align="center">HL4</p></div>
+				<div class="HLi"></div>
+			</div>
+			<div class="HL HL2">
+				<div class="SBh"><p align="center">HL2</p></div>
+				<div id="HL2ID" class="HLi"></div>
+			</div>
+			<div class="SB SB6">
+				<div class="SBh"><p align="center">SB6</p></div>
+				<button id="SB6ID" class="SBrb"></button>
+			</div>
+			<div>
+				<button id="SBSID" class="SBStart"></button>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 
-				el: $("#contents"),
-
-				initialize: function() {
-					this.render()
-				},
-
-				render: function() {
-					var template = "<body><h3>{{caption}}</h3><p> <strong>spend</strong> {{allText}}</p></body>"
-					var output = Mustache.render(template, this.model.toJSON())
-					this.$el.html(output)
-					return this
-				}
-			})
-			var sim = new Sim()
-			var simView = new SimView({model: sim})
-		</script>
-	</body>	
 </html>

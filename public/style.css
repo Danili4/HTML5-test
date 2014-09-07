@@ -1,0 +1,280 @@
+.panel {
+	width: 1200px;
+	height: 920px;	
+}
+
+.cntrblk {
+	width:1200px;
+	height: 200px;
+	border-color: #000;
+	border-radius: 20px;
+	background-color:#F3EC29;
+}
+
+.caption {
+	background-color: #F3EC29;
+	border: black 1px solid;
+	height: 40px;
+	padding: 5px 5px 10px 5px;
+	margin: 5px 5px 5px 5px;
+}
+
+.groupbox, legend {
+	background-color: #F3EC29;
+	border: black 1px solid;
+}
+
+.menu {
+	width: 80px;
+	height: 830px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+}
+
+.diagram {
+	width: 490px;
+	height: 490px;
+	margin: 5px 5px 5px 5px;
+	float: left;
+}
+
+.options {
+	width: 520px;
+	height: 250px;
+	margin: 5px 5px 5px 5px;
+	float: right;
+}
+
+.messages {
+	width: 520px;
+	height: 210px;
+	margin: 5px 5px 5px 5px;
+	float: right;
+}
+
+.log {
+	width:1045px;
+	height: 150px;
+	float: right;
+	margin: 5px 5px 5px 5px;
+}
+
+.control {
+	width:1045px;
+	height: 130px;
+	float: right;
+	margin: 5px 5px 5px 5px;
+}
+
+.block {
+	float: left;
+}	
+
+.mbutton {
+width: 100%;
+}
+
+.bt {
+margin-top:20px;
+margin-bottom:20px; 
+
+}
+
+.SB {
+	width:50px;
+	height:80px;
+	border-radius: 5px;
+	border-color: #000;
+	background-color:#555;
+}
+
+.SBh {
+	width:100%;
+	height:30%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #888;
+	margin-bottom:3px;
+}
+
+.SBrb {
+	width: 50px;
+	height:50px;
+	border-radius:50px;
+}
+
+.SB5 {
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+
+.SB4 {
+	position: relative;
+	top: 10px;
+	left: 20px;
+}
+
+.SB3 {
+	position:relative;
+	left: 100px;
+	top: -130px;
+}
+
+.SA {
+	width:50px;
+	height:80px;
+	border-radius: 5px;
+	border-color: #000;
+	background-color:#555;	
+}
+
+.SA2 {
+	position:relative;
+	top: -226px;
+	left: 180px;
+}
+
+.SB1 {
+	position: relative;
+	top: -360px;
+	left: 260px;
+}
+
+.SB2 {
+	position: relative;
+	top: -370px;
+	left: 260px;
+}
+
+.HL {
+	width:50px;
+	height:80px;
+	border-radius: 5px;
+	border-color: #000;
+	background-color:#555;	
+}
+
+.HL3 {
+	position: relative;
+	top: -551px;
+	left: 340px;
+}
+
+.HL4 {
+	position: relative;
+	top: -561px;
+	left: 340px;
+}
+
+.HL2 {
+	position: relative;
+	top: -745px;
+	left: 420px;
+}
+
+.SB6 {
+	position: relative;
+	top: -755px;
+	left: 420px;
+}
+
+.HLi {
+	width: 50px;
+	height:50px;
+	border-radius:50px;
+	background-color: #fff;
+}
+
+.Z {
+	border: black 1px solid;
+
+}
+
+.OptSub {
+	border: black 1px solid;
+	width: 95px;
+	height: 60px;
+	font-size: 14px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.OS {
+	float: left;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.PropHL {
+	float: left;
+	width: 90px;
+	background-color: #fff;
+	border: black 1px solid;
+	margin: 5px 5px 5px 5px;
+	font-size: 14px;
+}
+
+.Propi {
+	width:35px;
+	height:35px;
+	border-radius:35px;
+	border: black 1px solid;
+	background-color: #fff;
+	float: left;
+	margin: 5px 5px 5px 5px;
+}
+
+.Propt {
+	float: left;
+	width: 350px;
+	height: 35px;
+	background-color: #fff;
+	border: black 1px solid;
+	margin: 5px 80px 5px 5px;	
+}
+
+.CtrlHL {
+	width:100px;
+	height: 25px;
+	border: black 1px solid;
+	margin: 5px 5px 5px 5px;
+	font-size: 13px;
+}
+
+.ctlblk {
+	float:left;
+	margin: 5px 10px 5px 5px;
+}
+
+.SBStart {
+	position:relative;
+	width: 90px;
+	height:90px;
+	border-radius:90px;
+	top:-880px;
+	left: 510px;
+}
+
+.HLianim {
+	width: 50px;
+	height:50px;
+	border-radius:50px;
+	background-color: #fff;
+	-webkit-animation: power_on 5s;
+	animation: power_on 5s;
+}
+
+@-webkit-keyframes power_on {
+    0%   {background: white;}
+    25%  {background: red;}
+    50%  {background: white;}
+    100% {background: red;}
+}
+
+@keyframes power_on {
+    0%   {background: white;}
+    25%  {background: red;}
+    50%  {background: white;}
+    100% {background: red;}
+}
